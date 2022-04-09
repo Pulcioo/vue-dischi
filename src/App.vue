@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <HeaderComponent />
-    <MainComponent />
+    <MainComponent :url="apiUrl" />
   </div>
 </template>
 
@@ -14,6 +14,11 @@ export default {
   components: {
     HeaderComponent,
     MainComponent,
+  },
+  data() {
+    return {
+      apiUrl: "https://flynn.boolean.careers/exercises/api/array/music",
+    };
   },
 };
 </script>
