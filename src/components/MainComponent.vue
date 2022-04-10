@@ -1,8 +1,11 @@
 <template>
-  <div class="container">
+  <div class="container py-5">
     <div class="row">
-      <div v-if="albums.length > 0" class="col-12">
-        <CardAlbum :album="albums[0]" />
+      <div
+        v-if="albums.length > 0"
+        class="col-12 d-flex flex-wrap justify-content-center m"
+      >
+        <CardAlbum v-for="(item, index) in albums" :key="index" :album="item" />
       </div>
     </div>
   </div>
